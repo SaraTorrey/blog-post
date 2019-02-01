@@ -1,0 +1,71 @@
+body{
+    border: 20px solid rgb(206, 198, 199);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 700px;
+    width: 80%;
+    color: rgb(56, 41, 41);
+}
+
+h1 {
+    text-align: center;
+    color: rgb(77, 54, 58);
+    font-family: Dosis;
+}
+
+h3, div {
+    text-align: left;
+    margin: 10px 10px;
+    font-family: Dosis;
+}
+
+.quote{
+    margin: 10px 10px;
+    border-left: 5px solid  rgb(206, 198, 199);
+    padding-left: 10px;
+}
+
+.date{
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 0.4rem;
+    font-family: dosis;
+    margin: 10px auto;
+    padding: 10px;
+    color: rgb(126, 84, 91);
+}
+
+.post {
+    margin: 10px 10px;
+    text-align: left;
+}
+hr{
+    margin: 15px;
+    border-top: 1px solid rgb(206, 198, 199);
+    border-bottom: 1px solid rgb(206, 198, 199);
+}
+
+hr{
+    color: rgb(218, 180, 180);
+    border-width: 1px;
+}
+
+img{
+    float: center;
+    width: 80%;
+    margin: 20px;
+    padding: 30px;
+}
+
+h2{
+    font-family: muli;
+    margin: 10px auto;
+    padding: 10px;
+    color: rgb(77, 54, 58);
+}
+
+p{
+    margin: 10px;
+    font-family: Dosis;
+    font-size: 17px;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Contrail+One|Dosis" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+</head>
+<body>
+    <h1 style="font-family: dosis" th:text="${blogPost.title}" >A Title</h1>
+    <h3 th:text="${blogPost.author.name}"></h3>
+    <div class="Date" th:text="${blogPost.date}"></div>
+    <div class="post" th:text="${blogPost.body}">
+
+
+        <img src="https://images.unsplash.com/photo-1508830524289-0adcbe822b40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1611&q=80">
+
+    </div>
+
+    <hr>
+
+
+    <div class="post">
+        <div class="date"></div>
+        <h2></h2>
+
+        <p class="quote">
+        </p>
+    </div>
+</body>
+</html>
