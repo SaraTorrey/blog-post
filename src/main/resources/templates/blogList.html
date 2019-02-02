@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Contrail+One|Dosis" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+</head>
+<body>
+<h1 style="font-family: dosis">Blog List</h1>
+<table>
+    <tr th:each="blogEntry : ${blogList}">
+        <td>
+            <a th:href="${ '/blogPost/' + blogEntry.webTitle}" th:text="${blogEntry.title}"></a>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

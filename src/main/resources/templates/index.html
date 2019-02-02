@@ -8,8 +8,9 @@
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
 </head>
 <body>
+<a href="/blogList">Back to Blog List</a>
     <h1 style="font-family: dosis" th:text="${blogPost.title}" >A Title</h1>
-    <h3 th:text="${blogPost.author.name}"></h3>
+    <!--<h3 th:text="${blogPost.author.name}"></h3>-->
     <div class="Date" th:text="${blogPost.date}"></div>
     <div class="post" th:text="${blogPost.body}">
 
