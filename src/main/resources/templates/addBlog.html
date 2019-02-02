@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Contrail+One|Dosis" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+</head>
+<body>
+<h1 style="font-family: dosis">Add Blog</h1>
+
+<form action="#" th:action="@{/saveBlog}" th:object="${newBlog}" method="post">
+    <table border="1">
+        <tr>
+            <td>
+                <label>Title</label>
+            </td>
+            <td>
+                <input th:field="*{title}"/>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Web Title</label>
+            </td>
+            <td>
+                <input th:field="*{webTitle}"/>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Body</label>
+            </td>
+            <td>
+                <input th:field="*{body}"/>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Submit"/></td>
+        </tr>
+    </table>
+</form>
+
+
+</body>
+</html>

@@ -8,13 +8,14 @@
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
 </head>
 <body>
-<h1 style="font-family: dosis">Blog List</h1>
-<table>
-    <tr th:each="blogEntry : ${blogList}">
-        <td>
-            <a th:href="${ '/blogPost/' + blogEntry.webTitle}" th:text="${blogEntry.title}"></a>
-        </td>
-    </tr>
-</table>
+    <h1 style="font-family: dosis">Blog List</h1>
+    <a href="/addBlog">Add Blog</a>
+    <table>
+        <tr th:each="blogEntry : ${blogList}">
+            <td>
+                <a th:href="${ '/blogPost/' + blogEntry.webTitle}" th:text="${blogEntry.title}"></a>
+            </td>
+        </tr>
+    </table>
 </body>
 </html>
