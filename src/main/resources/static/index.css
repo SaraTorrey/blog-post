@@ -7,8 +7,13 @@ body{
     color: rgb(56, 41, 41);
 }
 
-a {
+a, tbody {
     font-family: Dosis;
+}
+
+td {
+    table-layout: auto;
+    width: 100px;
 }
 
 h1 {

@@ -1,0 +1,9 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<h1>Welcome to the Photo Gallery</h1>
+
+<p th:text="${'You have ' + photoCount + ' photos!'}"></p>
+
+<img  th:each="i: ${#numbers.sequence(1, photoCount)}" src="https://images.unsplash.com/photo-1552585960-0e1069ce7405?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80"/>
+<!--<img  th:each="i: ${#numbers.sequence(1, photoCount)}" src="https://images.unsplash.com/photo-1552585960-0e1069ce7405?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80"/>-->
+
+</html>

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 
 import javax.annotation.Resource;
 
-@SessionAttributes({"newBlog"})
+@SessionAttributes( { "newBlog" } )
 @Controller
 public class BlogController {
 
@@ -29,12 +29,30 @@ public class BlogController {
         return "index";
     }
 
-    @GetMapping( "/blogList" )
+    @GetMapping( "/photoGallery/{photoCount}/{secret}" )
+    public String photoGallery( @PathVariable int photoCount, @PathVariable String secret, Model model ) {
+
+        System.out.println( "Secret " + secret );
+        System.out.println( photoCount );
+
+        model.addAttribute( "photoCount", photoCount );
+
+        return "photoGallery";
+    }
+
+    @GetMapping( "/photoGallery/{secret}" )
+    public String photoGallery( @PathVariable String secret, Model model ) {
+
+        System.out.println( "Secret " + secret );
+        return "photoGallery";
+    }
+
+    @GetMapping( "/blogs" )
     public String blogList( Model model ) {
 
         model.addAttribute( "blogList", blogRepo.findAllByOrderByTitle() );
 
-        return "blogList";
+        return "blogs";
     }
 
     // Go to page
@@ -52,7 +70,7 @@ public class BlogController {
     }
 
     @PostMapping( "/saveBlog" )
-    public String saveBlog(  @ModelAttribute("blogPost") BlogPost blogPost ,Model model ) {
+    public String saveBlog( @ModelAttribute( "blogPost" ) BlogPost blogPost, Model model ) {
 
         blogRepo.save( blogPost );
 
